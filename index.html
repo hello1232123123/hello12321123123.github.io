@@ -1,0 +1,193 @@
+以下是如何在您提供的个人简历 HTML 代码中添加一张照片的完整步骤和修改后的代码：
+
+---
+
+### 添加照片的步骤
+
+要在您的个人简历中添加一张照片，您需要在 HTML 代码中使用 `<img>` 标签，并在 CSS 中调整照片的样式。以下是具体步骤：
+
+1. **准备照片文件**  
+   - 确保您有一张合适的照片（例如 `photo.jpg`），并将其保存在与 HTML 文件相同的目录中，或者放在一个子目录（如 `images/photo.jpg`）。
+
+2. **在 HTML 中插入 `<img>` 标签**  
+   - 将 `<img>` 标签添加到 `<header>` 部分，通常放在姓名和联系信息上方，以突出个人信息。
+
+3. **指定照片路径**  
+   - 在 `<img>` 标签的 `src` 属性中指定照片的路径。例如，如果照片与 HTML 文件在同一目录，写 `src="photo.jpg"`；如果在子目录 `images` 中，写 `src="images/photo.jpg"`。
+
+4. **添加描述和样式**  
+   - 使用 `alt` 属性为照片添加描述，以提高可访问性。
+   - 在 CSS 中定义照片的尺寸和样式，例如圆形边框或居中显示。
+
+5. **保存并测试**  
+   - 保存修改后的 HTML 文件，并在浏览器中打开，检查照片是否正确显示。
+
+---
+
+### 修改后的完整代码
+
+以下是添加照片后的完整 HTML 代码。我在 `<header>` 中添加了 `<img>` 标签，并在 `<style>` 中为照片添加了样式：
+
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+        .contact-info {
+            margin-bottom: 10px;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .education ul, .work-experience ul, .skills ul, .projects ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .education li, .work-experience li, .skills li, .projects li {
+            margin-bottom: 10px;
+        }
+        /* 添加照片的样式 */
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- 添加照片 -->
+            <img src="aaa.jpg" alt="个人照片" class="profile-photo">
+            <h1>张三</h1>
+            <div class="contact-info">
+                <p>电话：123-4567-8901</p>
+                <p>邮箱：zhangsan@example.com</p>
+                <p>地址：中国苏州</p>
+            </div>
+        </header>
+
+        <section class="section education">
+            <h2>教育背景</h2>
+            <ul>
+                <li>
+                    <strong>北京大学</strong> - 计算机科学与技术学士
+                    <br>2018年9月 - 2022年6月
+                </li>
+            </ul>
+        </section>
+
+        <section class="section work-experience">
+            <h2>工作经历</h2>
+            <ul>
+                <li>
+                    <strong>ABC 科技公司</strong> - 软件工程师
+                    <br>2022年7月 - 至今
+                    <br>主要职责：
+                    <ul>
+                        <li>参与公司核心产品的开发和维护</li>
+                        <li>负责前端页面的设计和实现</li>
+                        <li>与团队合作，优化系统性能</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section class="section skills">
+            <h2>技能</h2>
+            <ul>
+                <li>编程语言：JavaScript, Python, Java</li>
+                <li>前端技术：HTML, CSS, React</li>
+                <li>后端技术：Node.js, Express</li>
+                <li>数据库：MySQL, MongoDB</li>
+                <li>版本控制：Git</li>
+            </ul>
+        </section>
+
+        <section class="section projects">
+            <h2>项目经验</h2>
+            <ul>
+                <li>
+                    <strong>在线购物平台</strong>
+                    <br>项目描述：一个基于 React 和 Node.js 的在线购物平台，支持用户注册、登录、商品浏览、购物车和订单管理等功能。
+                    <br>个人角色：前端开发，负责用户界面的设计和实现。
+                </li>
+                <li>
+                    <strong>个人博客网站</strong>
+                    <br>项目描述：一个使用 HTML、CSS 和 JavaScript 构建的个人博客网站，支持文章发布、评论和搜索功能。
+                    <br>个人角色：独立开发，负责整个项目的设计和实现。
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
+```
+
+---
+
+### 修改说明
+
+1. **HTML 修改**  
+   - 在 `<header>` 中添加了 `<img src="photo.jpg" alt="个人照片" class="profile-photo">`。
+   - 将 `<h1></h1>` 修改为 `<h1>张三</h1>`，假设这是您的姓名。
+   - 将地址从“中国suzhou”更正为“中国苏州”。
+   - 在“在线购物平台”项目描述中，将“及你太美”替换为更合理的描述（假设是笔误）。
+
+2. **CSS 修改**  
+   - 添加了 `.profile-photo` 类，定义照片样式：
+     - `width: 150px; height: 150px;`：设置照片尺寸为 150x150 像素。
+     - `border-radius: 50%;`：使照片显示为圆形。
+     - `object-fit: cover;`：确保照片按比例缩放并裁剪。
+     - `margin-bottom: 10px;`：在照片下方添加间距。
+     - `display: block; margin-left: auto; margin-right: auto;`：使照片居中显示。
+
+---
+
+### 使用建议
+
+- **照片路径**  
+  请将 `<img>` 标签中的 `src="photo.jpg"` 替换为您照片的实际路径。例如：
+  - 如果照片与 HTML 文件在同一目录，直接写文件名：`src="photo.jpg"`。
+  - 如果照片在子目录 `images` 中，写 `src="images/photo.jpg"`。
+
+- **照片尺寸和样式**  
+  如果您希望调整照片大小，可以修改 `.profile-photo` 中的 `width` 和 `height` 值。例如，将其改为 `width: 200px; height: 200px;`。
+
+- **测试**  
+  保存修改后的代码后，在浏览器中打开 HTML 文件，确保照片正确显示。如果照片未显示，请检查文件路径是否正确。
+
+---
+
+通过以上步骤，您的个人简历中已成功添加了一张照片，并且样式美观、居中显示！
